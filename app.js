@@ -1,11 +1,15 @@
 require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
+const corsOptions = {
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'Authorization'] 
+};
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json())
 
 //Configuração do Nodemailer
