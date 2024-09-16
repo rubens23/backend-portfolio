@@ -3,7 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const corsOptions = {
-    origin: 'https://rubens23.github.io/portfolio-rubens-2/',
+    origin: 'https://rubens23.github.io',
     methods: ['POST'], 
     allowedHeaders: ['Content-Type', 'Authorization'] 
 };
